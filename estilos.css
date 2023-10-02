@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1c243b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #1c243b;
+    color: #f9d265;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Estilos de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #1c243b;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: block; /* Cambiar de "inline" a "block" para una disposición vertical */
+    margin: 10px 0;
+}
+
+/* Añade una clase a los enlaces para darles estilo */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    display: block; /* Cambia "inline" a "block" */
+}
+
+/* Estilos del contenido principal */
+.main {
+    padding: 0;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el contenido superpuesto */
+.content {
+    position: relative; /* Cambiar de "absolute" a "relative" para mantener centrado */
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #1c243b;
+    color: #f9d265;
+    text-align: center;
+    padding: 10px 0;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffae00;
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #003366;
+    color: #ffae00;
+}

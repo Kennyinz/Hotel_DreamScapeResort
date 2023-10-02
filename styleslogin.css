@@ -1,0 +1,170 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #7e5417;
+    font-size: 36px;
+}
+
+/* Estilos del formulario de inicio de sesión */
+.login-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    color: #7e5417;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7e5417;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-box button {
+    background-color: #7e5417;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background-color: #5a3c10;
+}
+
+/* Estilos para el resto de la página de gestión hotelera */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reservation-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form h2 {
+    color: #7e5417;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7e5417;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="number"],
+.reservation-form input[type="date"],
+.reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reservation-form button {
+    background-color: #7e5417;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.reservation-form button:hover {
+    background-color: #5a3c10;
+}
+
+.reservation-list {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-list h2 {
+    color: #7e5417;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.reservation-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-list li {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.available-rooms {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.available-rooms h2 {
+    color: #7e5417;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.available-rooms ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.available-rooms li {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}

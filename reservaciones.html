@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Scape Resort</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluye el archivo JavaScript -->
+    <script src="java.js"></script>
+    <style>
+        /* Estilos para alinear el botón "Personal" a la derecha */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1c243b; /* Color de fondo de la barra de navegación */
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px; /* Espacio entre elementos del menú */
+        }
+        .navbar li:last-child {
+            margin-left: auto; /* Mueve el elemento "Personal" a la derecha */
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white; /* Color de texto en los enlaces del menú */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a Dream Scape Resort!</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reservaciones.html">Reservaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="mi_perfil.html">Mi Perfil</a></li>
+        </ul>
+        <li><a href="login.html" id="personal">Personal</a></li> <!-- Cambiamos el atributo href para redireccionar a login.html y agregamos el ID "personal" -->
+    </nav>
+
+    <main class="main">
+        <section id="reservations" class="section">
+            <h2>Reservaciones</h2>
+            <div class="room-grid">
+                <!-- Cuadrante 1 -->
+                <a href="habitacion1.html">
+                    <div class="room">
+                        <img src="hab1.jpg" alt="Habitación 1">
+                        <h3>Habitación 1</h3>
+                        <p>Precio: $200/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 2 -->
+                <a href="habitacion2.html">
+                    <div class="room">
+                        <img src="hab2.jpg" alt="Habitación 2">
+                        <h3>Habitación 2</h3>
+                        <p>Precio: $250/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 3 -->
+                <a href="habitacion3.html">
+                    <div class="room">
+                        <img src="hab3.jpg" alt="Habitación 3">
+                        <h3>Habitación 3</h3>
+                        <p>Precio: $220/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 4 -->
+                <a href="habitacion4.html">
+                    <div class="room">
+                        <img src="hab4.jpg" alt="Habitación 4">
+                        <h3>Habitación 4</h3>
+                        <p>Precio: $270/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 5 -->
+                <a href="habitacion5.html">
+                    <div class="room">
+                        <img src="hab5.jpg" alt="Habitación 5">
+                        <h3>Habitación 5</h3>
+                        <p>Precio: $230/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 6 -->
+                <a href="habitacion6.html">
+                    <div class="room">
+                        <img src="hab6.jpg" alt="Habitación 6">
+                        <h3>Habitación 6</h3>
+                        <p>Precio: $260/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 7 -->
+                <a href="habitacion7.html">
+                    <div class="room">
+                        <img src="hab7.jpg" alt="Habitación 7">
+                        <h3>Habitación 7</h3>
+                        <p>Precio: $210/noche</p>
+                    </div>
+                </a>
+                <!-- Cuadrante 8 -->
+                <a href="habitacion8.html">
+                    <div class="room">
+                        <img src="hab8.jpg" alt="Habitación 8">
+                        <h3>Habitación 8</h3>
+                        <p>Precio: $280/noche</p>
+                    </div>
+                </a>
+                <!-- Repite estos bloques para las demás habitaciones -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dream Scape Resort</p>
+    </footer>
+</body>
+</html>
+
+

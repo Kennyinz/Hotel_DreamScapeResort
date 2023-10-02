@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Scape Resort - Habitación 8</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluye el archivo JavaScript -->
+    <script src="java.js"></script>
+    <style>
+        /* Estilos para alinear el botón "Personal" a la derecha */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1c243b; /* Color de fondo de la barra de navegación */
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px; /* Espacio entre elementos del menú */
+        }
+        .navbar li:last-child {
+            margin-left: auto; /* Mueve el elemento "Personal" a la derecha */
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white; /* Color de texto en los enlaces del menú */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a Dream Scape Resort!</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reservaciones.html">Reservaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="mi_perfil.html">Mi Perfil</a></li>
+        </ul>
+        <li><a href="login.html" id="personal">Personal</a></li>
+    </nav>
+
+    <main class="main">
+        <section id="habitacion6" class="section">
+            <h2>Habitación 6</h2>
+            <div class="room-container">
+                <div class="room">
+                    <div class="room-image">
+                        <img src="hab6.jpg" alt="Habitación 6">
+                    </div>
+                    <div class="room-info">
+                        <h3>Habitación 6</h3>
+                        <p>Precio: $260/noche</p>
+                        <p>Descripción: Disfruta de una estancia relajante en esta habitación tranquila y confortable. Con una tarifa de $260 por noche, esta habitación cuenta con una cama queen-size, un balcón privado con vistas al jardín y un moderno baño. Es el lugar perfecto para descansar y recargar energías durante tu viaje.</p>
+                        <a class="button" href="metododepago.html">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dream Scape Resort</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Scape Resort</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1c243b;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #1c243b;
+            color: #f9d265;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* Estilos de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #1c243b;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffae00;
+            color: #003366;
+        }
+
+        /* Estilos del contenido principal */
+        .main {
+            padding: 0;
+            position: relative;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        /* Estilos para el video de fondo */
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .video-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Estilos para el contenido superpuesto */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffae00;
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #003366;
+            color: #ffae00;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #1c243b;
+            color: #f9d265;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Estilos para la sección de Reservaciones */
+        #reservations {
+            background-color: #1c243b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .room {
+            padding: 20px;
+            background-color: #fff4d6;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .room:hover {
+            transform: scale(1.05);
+        }
+
+        .room img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .room h3 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #003366;
+        }
+
+        .room p {
+            margin-top: 5px;
+            font-size: 1.25rem;
+            color: #555;
+        }
+
+        .room-grid a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Estilos para el botón de reserva */
+        .button-reserva {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffae00;
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-reserva:hover {
+            background-color: #003366;
+            color: #ffae00;
+        }
+
+        /* Estilos para el recuadro emergente */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1c243b;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 3;
+        }
+
+        .login-box h3 {
+            color: #ffae00;
+        }
+
+        .login-box label {
+            color: #fff;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-box input[type="submit"] {
+            background-color: #ffae00;
+            color: #003366;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-box input[type="submit"]:hover {
+            background-color: #003366;
+            color: #ffae00;
+        }
+
+        .login-box p {
+            color: #fff;
+        }
+
+        .login-box a {
+            color: #ffae00;
+            text-decoration: none;
+        }
+
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para el mensaje de confirmación */
+        .confirmation-message {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 51, 102, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a Dream Scape Resort!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reservaciones.html">Reservaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="mi_perfil.html">Mi Perfil</a></li>
+        </ul>
+    </nav>
+
+    <main class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="videocasa.mp4" type="video/mp4">
+            Tu navegador no admite el elemento de video.
+        </video>
+        <div class="content">
+            <h2>Descubre una experiencia única</h2>
+            <p>Bienvenido a Dream Scape Resort, donde la comodidad y la hospitalidad se unen para ofrecerte una estancia inolvidable.</p>
+            <a href="reservaciones.html" class="button">Reservar Ahora</a>
+        </div>
+    </main>
+
+    <!-- Recuadro emergente de inicio de sesión o registro -->
+    <div class="overlay" id="overlay">
+        <div class="login-box" id="login-box">
+            <h3>Iniciar sesión o registrarse</h3>
+            <form id="login-form">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value="Iniciar sesión">
+            </form>
+            <p>O <a href="#" id="register-link">regístrese</a> si aún no tiene una cuenta.</p>
+        </div>
+    </div>
+
+    <!-- Mensaje de confirmación -->
+    <div id="confirmation-message" class="confirmation-message">
+        <!-- Mensaje de confirmación, por ejemplo: "Inicio de sesión exitoso" o "Registro exitoso" -->
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Dream Scape Resort</p>
+    </footer>
+
+    <!-- JavaScript para mostrar el recuadro emergente al cargar la página -->
+    <script>
+        var overlay = document.getElementById("overlay");
+        
+        // Mostrar el recuadro emergente cuando se carga la página
+        window.addEventListener("load", function () {
+            overlay.style.display = "block";
+        });
+    </script>
+</body>
+</html>

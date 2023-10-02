@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Hotelera - Dream Scape Resort</title>
+    <link rel="stylesheet" href="styleslogin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión Hotelera</h1>
+        <div class="content">
+            <div class="reservation-form">
+                <h2>Reserva de Habitación</h2>
+                <form id="reservationForm">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required>
+                    <label for="roomNumber">Número de Habitación:</label>
+                    <select id="roomSelect" required>
+                        <!-- Las opciones se generarán dinámicamente desde JavaScript -->
+                    </select>
+                    <label for="checkIn">Fecha de Entrada:</label>
+                    <input type="date" id="checkIn" required>
+                    <label for="checkOut">Fecha de Salida:</label>
+                    <input type="date" id="checkOut" required>
+                    <button type="submit">Reservar</button>
+                </form>
+            </div>
+            <div class="reservation-list">
+                <h2>Lista de Reservas</h2>
+                <ul id="reservationList">
+                    <!-- Aquí se mostrarán las reservas -->
+                </ul>
+            </div>
+            <div class="available-rooms">
+                <h2>Habitaciones Disponibles</h2>
+                <ul id="roomsAvailable">
+                    <!-- Las habitaciones disponibles se generarán dinámicamente desde JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

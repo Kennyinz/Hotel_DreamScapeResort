@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Scape Resort</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluye el archivo JavaScript -->
+    <script src="java.js"></script>
+    <style>
+        /* Estilos para alinear el botón "Personal" a la derecha */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1c243b; /* Color de fondo de la barra de navegación */
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px; /* Espacio entre elementos del menú */
+        }
+        .navbar li:last-child {
+            margin-left: auto; /* Mueve el elemento "Personal" a la derecha */
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white; /* Color de texto en los enlaces del menú */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a En Dream Scape Resort!</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reservaciones.html">Reservaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="mi_perfil.html">Mi Perfil</a></li>
+        </ul>
+        <li><a href="login.html" id="personal">Personal</a></li> <!-- Cambiamos el atributo href para redireccionar a login.html y agregamos el ID "personal" -->
+    </nav>
+
+    <main>
+        <section>
+            <h2>Nuestros Servicios</h2>
+            <p>En En Dream Scape Resort, nos enorgullece ofrecer una amplia gama de servicios para hacer que su estancia sea cómoda y agradable. Algunos de nuestros servicios incluyen servicio de habitaciones las 24 horas, piscina, gimnasio y mucho más.</p>
+        </section>
+        
+        <section>
+            <h2>Eventos y Reuniones</h2>
+            <p>¿Planea una reunión de negocios o un evento especial? Nuestras instalaciones cuentan con salas de reuniones y banquetes perfectamente equipadas para satisfacer sus necesidades.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 En Dream Scape Resort</p>
+    </footer>
+</body>
+</html>
